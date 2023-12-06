@@ -2,16 +2,23 @@
     --green: #00b289;
     --white: #fff;
     --dark: #4c4d5f;
+    --darker: #4c525a;
     --yellow: #f8db62;
+    --bg-ff: 'Hedvig Letters Serif', serif;
+    --sm-ff: 'Roboto', sans-serif;
 }
 
 body {
     margin: 0;
     min-height: 100%;
     background-color: #fff;
-    font-family: sans-serif;
+    font-family: var(--sm-ff);
     font-size: .875rem;
-    color: #4c525a
+    color: var(--darker);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 
@@ -19,7 +26,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--dark)
+    color: var(--darker)
 }
 
 
@@ -51,7 +58,7 @@ nav li {
     list-style: none;
     font-size: 1.0625rem;
     font-weight: 300;
-    color: var(--dark);
+    color: var(--darker);
 }
 
 
@@ -91,6 +98,125 @@ button {
 
 /* main */
 
-.hero {
-    margin-top: 10rem;
+.hero,
+.features,
+.responsive-tabs {
+    width: 90%;
+    margin: 10rem auto;
+}
+
+.hero-text {
+    width: 100%;
+}
+
+.hero-title {
+    font-family: var(--bg-ff);
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--darker);
+}
+
+.hero-description {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--darker);
+}
+
+.email-and-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.hero-text input {
+    height: 70px;
+    width: 75%;
+    padding-block: 1rem;
+    padding-left: .625rem;
+    padding-right: 1.5rem;
+    border: 2px solid var(--green);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.hero-text input::placeholder {
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+.hero-text button {
+    height: 70px;
+    width: 25%;
+    border-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.hero-img img {
+    width: 100%;
+}
+
+/* features section */
+
+.features-text {
+    text-align: center;
+}
+
+.features-title {
+    font-size: 1.5rem;
+    font-family: var(--bg-ff);
+}
+
+.features-description,
+.features-img h3 {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.features-description {
+    font-weight: 300;
+}
+
+.features-img h3 {
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+}
+
+.features-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.features-img-1,
+.features-img-2 {
+    text-align: center;
+    width: 45%;
+}
+
+.features-img-1 img,
+.features-img-2 img {
+    width: 100%;
+}
+
+/* responsive tabs section */
+
+.tab-content div {
+    padding: 1.4rem 1.25rem;
+    border-bottom: .5px solid gray;
+}
+
+.tab-content div:last-child {
+    border-bottom: 0;
+}
+
+.tab-content p {
+    font-size: 1rem;
+    font-weight: 600;
 }
